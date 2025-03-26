@@ -84,10 +84,8 @@ function calcularPromedio()
     }
 }
 
-function mostrarMayorMateria()
-{
-    if(validarForm())
-    {
+function mostrarMayorMateria() {
+    if (validarForm()) {
         const matematica = parseFloat(document.getElementById("Matematica").value);
         const lengua = parseFloat(document.getElementById("Lengua").value);
         const EFSI = parseFloat(document.getElementById("EFSI").value);
@@ -101,27 +99,23 @@ function mostrarMayorMateria()
         let maxString = "";
         let mas2 = false;
         listado.forEach(valor => {
-            if(max < valor)
-            {
-                max = valor
-                maxString = nombre;
-            }
-            else if(max == valor)
-            {
+            if (max < valor.valor) {
+                max = valor.valor;
+                maxString = valor.nombre;
+                mas2 = false;
+            } else if (max == valor.valor) {
                 mas2 = true;
-                maxString += " y " + nombre; 
+                maxString += " y " + valor.nombre;
             }
         });
-        if(!mas2)
-        {
+        if (!mas2) {
             mayor.textContent = "La materia que mayor nota obtuvo fue: " + maxString;
-        }
-        else
-        {
+        } else {
             mayor.textContent = "Las materias que mayor nota obtuvieron fueron: " + maxString;
         }
     }
 }
+
 
 function validarForm()
 {
@@ -132,4 +126,14 @@ function validarForm()
         exito = false;
     }
     return exito;
+}
+
+window.onload = function() {
+    anime({
+        targets: '.formulario-container',
+        translateY: [-100, 0],
+        opacity: [0, 1],
+        duration: 1500,
+        easing: 'easeOutBounce'
+    })
 }

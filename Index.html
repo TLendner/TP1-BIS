@@ -1,44 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario Legendario</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </head>
 <body>
-    <form>
-        <div class="container">
+    <div class="formulario-container">
+        <h1>EL SENDERO DEL DRAGÓN</h1>
+        <p>Solo para valientes que desean calcular su destino.</p>
+        <form>
             <div class="form-group">
-                <label for="Materia">Matematica:</label>
-                <input type="text" id="Matematica" onchange="validarMatematica()" />
+                <label for="Matematica">数学:</label>
+                <input type="text" id="Matematica" onchange="validarMatematica()" placeholder="输入注释" />
                 <p class="requerimientos" id="requerimientoMatematica"></p>
             </div>
 
             <div class="form-group">
-                <label for="Materia">Lengua:</label>
-                <input type="text" id="Lengua" onchange="validarLengua()" />
+                <label for="Lengua">语言:</label>
+                <input type="text" id="Lengua" onchange="validarLengua()" placeholder="输入注释" />
                 <p class="requerimientos" id="requerimientoLengua"></p>
             </div>
 
             <div class="form-group">
-                <label for="Materia">EFSI:</label>
-                <input type="text" id="EFSI" onchange="validarEFSI()" />
+                <label for="EFSI">EFSI:</label>
+                <input type="text" id="EFSI" onchange="validarEFSI()" placeholder="输入注释" />
                 <p class="requerimientos" id="requerimientoEFSI"></p>
             </div>
-        </div>
-            
-        <div class="form-group">
-            <button type="button" onclick="calcularPromedio()"><span>Calcular promedio</span></button>
-            <p class="promedio" id="promedio"></p>
-        </div>    
-        <div class="form-group">
-            <button type="button" onclick="mostrarMayorMateria()"><span>Mostrar mayor nota</span></button>
-            <p class="notaMayor" id="notaMayor"></p>
-        </div>
 
-    </form>
-
+            <div class="acciones">
+                <button type="button" onclick="calcularPromedio()" class="btn animado">📊 计算平均值</button>
+                <p class="promedio" id="promedio"></p>
+                <button type="button" onclick="mostrarMayorMateria()" class="btn animado">🏆 显示最高等级</button>
+                <p class="notaMayor" id="notaMayor"></p>
+            </div>
+        </form>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

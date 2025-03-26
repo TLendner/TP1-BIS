@@ -1,0 +1,113 @@
+/* Estilos Legendarios con Dragones */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Noto+Sans+SC:wght@400;700&display=swap');
+
+body {
+    font-family: 'Cinzel', serif;
+    background: url('https://windowscustomization.com/wp-content/uploads/2019/10/Dragon-Godess.gif') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 2s ease-in-out;
+    overflow: hidden;
+}
+
+.formulario-container {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    animation: slideIn 1.5s ease-out;
+    position: relative;
+}
+
+h1 {
+    font-size: 3em;
+    color: #ffcc00;
+    text-shadow: 3px 3px 8px rgba(255, 165, 0, 0.7);
+    animation: bounce 2s infinite;
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in;
+    position: relative;
+}
+
+label {
+    display: block;
+    font-size: 1.8em;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 80%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.4em;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+input:focus {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #ffcc00;
+    outline: none;
+}
+
+button {
+    background: linear-gradient(to right, #ffcc00, #ffaa00);
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.8em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0px 5px 15px rgba(255, 165, 0, 0.7);
+}
+
+button:hover {
+    background: linear-gradient(to right, #ffaa00, #ff8800);
+    transform: scale(1.15);
+    box-shadow: 0px 5px 20px rgba(255, 69, 0, 0.8);
+}
+
+.acciones {
+    margin-top: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes glow {
+    0% { text-shadow: 0px 0px 5px #ffcc00; }
+    50% { text-shadow: 0px 0px 20px #ff6600; }
+    100% { text-shadow: 0px 0px 5px #ffcc00; }
+}
