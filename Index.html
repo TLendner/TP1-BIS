@@ -7,26 +7,36 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <form action="" onsubmit="return validarForm()">
+    <form>
         <div class="container">
             <div class="form-group">
                 <label for="Materia">Matematica:</label>
-                <input type="text" id="Matematica" onchange="validarNota()" />
+                <input type="text" id="Matematica" onchange="validarMatematica()" />
                 <p class="requerimientos" id="requerimientoMatematica"></p>
             </div>
 
             <div class="form-group">
                 <label for="Materia">Lengua:</label>
-                <input type="text" id="Lengua" onchange="validarNota()" />
+                <input type="text" id="Lengua" onchange="validarLengua()" />
                 <p class="requerimientos" id="requerimientoLengua"></p>
             </div>
 
             <div class="form-group">
                 <label for="Materia">EFSI:</label>
-                <input type="text" id="EFSI" onchange="validarNota()" />
+                <input type="text" id="EFSI" onchange="validarEFSI()" />
                 <p class="requerimientos" id="requerimientoEFSI"></p>
             </div>
         </div>
+            
+        <div class="form-group">
+            <button type="button" onclick="calcularPromedio()"><span>Calcular promedio</span></button>
+            <p class="promedio" id="promedio"></p>
+        </div>    
+        <div class="form-group">
+            <button type="button" onclick="mostrarMayorMateria()"><span>Mostrar mayor nota</span></button>
+            <p class="notaMayor" id="notaMayor"></p>
+        </div>
+
     </form>
 
     <script src="script.js"></script>
