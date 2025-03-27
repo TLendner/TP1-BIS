@@ -79,7 +79,7 @@ function calcularPromedio()
         const promedio = document.getElementById("promedio");
         console.log(matematica);
         let calculo = (matematica + lengua + EFSI)/3
-        promedio.textContent = "El promedio es: " + calculo;
+        promedio.textContent = "El promedio es: " + calculo.toFixed(2);
         if(calculo >= 6)
         {
             promedio.style.color="green";
