@@ -56,7 +56,7 @@ function validarEFSI()
     const errorMensaje = "La nota debe ser un número entre 1 y 10";
     if(nota.toString().length > 0)
     {
-        //requerimientoNota.textContent = "";
+
         if(validarNota(nota))
             {
                 requerimientoNota.style.display = "none";
