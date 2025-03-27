@@ -81,6 +81,13 @@ function calcularPromedio()
         console.log(matematica);
         let calculo = (matematica + lengua + EFSI)/3
         promedio.textContent = "El promedio es: " + calculo;
+        if(calculo >= 6)
+        {
+            promedio.style.color="green";
+        }
+        else{
+            promedio.style.color="red";
+        }
     }
 }
 
