@@ -87,6 +87,10 @@ button:hover {
     box-shadow: 0px 5px 20px rgba(255, 69, 0, 0.8);
 }
 
+.notaMayor {
+    color: blue;
+}
+
 .acciones {
     margin-top: 20px;
 }

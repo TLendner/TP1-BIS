@@ -1,8 +1,7 @@
 function validarNota(nota)
 {
-    const numExp = /\d/;
     let exito = true;
-    if(nota<1 || nota>10 || !numExp.test(nota))
+    if(nota<1 || nota>10 || isNaN(nota))
     {
         exito = false;
     }
